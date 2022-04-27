@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@splidejs/splide-extension-auto-scroll": "^0.4.2"
+  }
+}

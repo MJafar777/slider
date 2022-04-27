@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    background: rgb(27, 27, 27);
+}
+
+.navbar{
+    position: fixed;
+    width: 75px;
+    background-color: #fff;
+    inset: 20px 0 20px 20px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar .menuToggle{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0 23px;
+}
+
+.navbar .menuToggle::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transform: translateY(-8px);
+    transition: 0.5s;
+}
+
+.navbar .menuToggle::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transform: translateY(8px);
+    box-shadow: 0 -8px 0 black;
+    transition: 0.5s;
+}
+
+.navbar.open{
+    width: 250px;
+    transition: 0.5s;
+}
+
+.navbar.open .menuToggle::after{
+    transform: translateY(0) rotate(45deg);
+}
+
+.navbar.open .menuToggle::before{
+    transform: translateY(0) rotate(-45deg);
+    box-shadow: 0 0 0;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    height: 60px;
+    position: relative;
+    /* background-color: black; */
+}
+.navbar ul li a{
+    text-decoration: none;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    /* background-color: black; */
+    color: black;
+
+}
+.navbar ul li a .icon{
+    min-width: 55px;
+    height: 55px;
+    display: block;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 0.5s;
+    position: relative;
+}
+
+.navbar ul li a .text{
+    position: relative;
+    padding: 0 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.navbar.open ul li a .text{
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar ul li.active  .icon{
+    background-color: var(--clr);
+    color: white;
+    box-shadow: 0 0 3px 5px var(--clr);
+}
+.navbar ul li.active  .text{
+    color: var(--clr);
+}
+
+.navbar.open ul li.active a .icon{
+    transform: translateX(10px);
+}
+.navbar.open ul li.active a .text{
+    transform: translateX(10px);
+}
+.navbar.open ul li.active a .icon{
+    transform: translateX(10px);
+}
+.navbar ul li.active a .icon{
+    transform: translateX(30px);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="splide-4.0.1/splide-4.0.1/dist/css/splide.min.css">
+</head>
+
+<body>
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide"><img src="images/wallpaperflare.com_wallpaper (1).jpg" alt=""></li>
+                <li class="splide__slide"><img src="images/wallpaperflare.com_wallpaper (2).jpg" alt=""></li>
+                <li class="splide__slide"><img src="images/wallpaperflare.com_wallpaper (3).jpg" alt=""></li>
+                <li class="splide__slide"><img src="images/wallpaperflare.com_wallpaper (6).jpg" alt=""></li>
+                <li class="splide__slide"><img src="images/wallpaperflare.com_wallpaper.jpg" alt=""></li>
+                <li class="splide__slide"><img src="images/wp2289101-coco-pixar-wallpapers.jpg" alt=""></li>
+                <li class="splide__slide"><img src="images/wp2366075-fortnite-battle-royal-hd-wallpapers.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="splide-4.0.1/splide-4.0.1/dist/js/splide.js"></script>
+    <script
+        src="splide-4.0.1/AvtoScroll/node_modules/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js">
+    </script>
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            drag: 'free',
+            focus: 'center',
+            perPage: 3,
+            autoScroll: {
+                speed: 1,
+            },
+        }).mount(window.splide.Extensions);
+    </script>
+</body>
+
+</html>
